@@ -68,21 +68,25 @@ function updateCurrentWeather(data) {
 }
 
 function updateForecast(data) {
-  const forecastDisplay = document.getElementById("forecast");
-  forecastDisplay.innerHTML = "<h3>5-Day Forecast:</h3>";
+  const forecastDisplay = document
+    .getElementById("forecast")
+    .querySelector(".row");
+  forecastDisplay.innerHTML = ""; // Clear previous entries
   data.list.forEach((forecast, index) => {
     if (index % 8 === 0) {
-      forecastDisplay.innerHTML += `
-              <div>
-                  <h4>${new Date(forecast.dt * 1000).toLocaleDateString()}</h4>
-                  <img src="http://openweathermap.org/img/w/${
-                    forecast.weather[0].icon
-                  }.png" alt="Weather icon">
-                  <p>Temp: ${forecast.main.temp} ${getTemperatureUnit()}°</p>
-                  <p>Wind: ${forecast.wind.speed} m/s</p>
-                  <p>Humidity: ${forecast.main.humidity}%</p>
-              </div>
-          `;
+      // Assuming each forecast entry comes every 3 hours, 8 entries amount to 24 hours
+      const forecastHTML = `
+        <div class="col-md-2 forecast-item">
+            <h4>${new Date(forecast.dt * 1000).toLocaleDateString()}</h4>
+            <img src="http://openweathermap.org/img/w/${
+              forecast.weather[0].icon
+            }.png" alt="Weather icon" class="img-fluid">
+            <p>Temp: ${forecast.main.temp} ${getTemperatureUnit()}°</p>
+            <p>Wind: ${forecast.wind.speed} m/s</p>
+            <p>Humidity: ${forecast.main.humidity}%</p>
+        </div>
+      `;
+      forecastDisplay.innerHTML += forecastHTML;
     }
   });
 }

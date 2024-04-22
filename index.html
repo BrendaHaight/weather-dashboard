@@ -4,16 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Dashboard</title>
+    <
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Weather Dashboard</h1>
-    <form id="city-form">
-      <input type="text" id="city-input" placeholder="Enter city name" />
-      <button type="submit">Search</button>
-    </form>
-    <div id="current-weather"></div>
-    <div id="forecast"></div>
-    <div id="search-history"></div>
+    <div class="container mt-5">
+      <!-- Main title -->
+      <h1 class="mb-4 text-center">Weather Dashboard</h1>
+
+      <div class="row">
+        <div class="col-md-4">
+          <!-- Search bar -->
+          <form id="city-form" class="mb-3">
+            <input
+              type="text"
+              id="city-input"
+              class="form-control"
+              placeholder="Enter city"
+            />
+            <button type="submit" class="btn btn-primary mt-2">Search</button>
+          </form>
+          <!-- Search history -->
+          <div class="mb-3">
+            <h3>Search History</h3>
+            <ul id="search-history" class="list-group"></ul>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <!-- Current weather -->
+          <div id="current-weather" class="border p-3 mb-3">
+            <h2>Current Weather</h2>
+            <!-- Current weather content goes here -->
+          </div>
+          <!-- Forecast -->
+          <div id="forecast" class="border p-3">
+            <h3 class="text-center">5-Day Forecast</h3>
+            <div class="row"></div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="JavaScript/script.js"></script>
   </body>
