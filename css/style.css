@@ -1,0 +1,18 @@
+.forecast-item {
+  background-color: darkslateblue;
+  border: 2px solid #dee2e6;
+  color: aliceblue;
+  margin: 10px;
+  width: calc(50% - 50px);
+  box-sizing: border-box;
+  display: inline-block; /* Make the forecast items display inline */
+}
+
+#city-form,
+#search-history {
+  padding-left: 0; /* Remove padding on the left */
+}
+
+.list-group {
+  padding-left: 0; /* Remove list padding if needed */
+}
