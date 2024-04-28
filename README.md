@@ -4,7 +4,7 @@
 
 The Weather Dashboard is a web application that allows users to check the current weather and 5-day forecast for any city around the world.
 
-![Page](../weather-dashboard/images/main-page.png)
+![Page](images/main-page.png)
 
 ## Features
 
@@ -31,8 +31,8 @@ The Weather Dashboard is a web application that allows users to check the curren
 3. View the current weather and 5-day forecast displayed on the screen.
 4. Click on a city in the search history to quickly view its weather and forecast.
 
-![Displaying-weather](../weather-dashboard/images/Displaying%20weather.png)
-![Displaying-history](../weather-dashboard/images/History.png)
+![Displaying-weather](images/Displaying%20weather.png)
+![Displaying-history](images/History.png)
 
 ## Credits
 
