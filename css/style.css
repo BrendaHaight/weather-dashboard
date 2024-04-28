@@ -1,18 +1,54 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/weather.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.container-fluid {
+  padding: 1;
+}
+
+input#city-input {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
 .forecast-item {
-  background-color: darkslateblue;
+  background-color: transparent;
   border: 2px solid #dee2e6;
   color: aliceblue;
   margin: 10px;
-  width: calc(50% - 50px);
   box-sizing: border-box;
-  display: inline-block; /* Make the forecast items display inline */
+  display: inline-block;
 }
 
 #city-form,
 #search-history {
-  padding-left: 0; /* Remove padding on the left */
+  padding-left: 10px;
 }
 
 .list-group {
-  padding-left: 0; /* Remove list padding if needed */
+  padding-left: 10px;
+}
+
+@media (max-width: 576px) {
+  .forecast-item {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  .forecast-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 992px) {
+  .forecast-item {
+    width: calc(50% - 20px);
+  }
 }
