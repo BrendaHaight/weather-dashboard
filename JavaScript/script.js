@@ -61,7 +61,7 @@ function updateCurrentWeather(data) {
       <img src="http://openweathermap.org/img/w/${
         data.weather[0].icon
       }.png" alt="Weather icon">
-      <p>Temperature: ${data.main.temp} ${getTemperatureUnit()}°</p>
+      <p>Temperature: ${data.main.temp} ${getTemperatureUnit()}</p>
       <p>Humidity: ${data.main.humidity}%</p>
       <p>Wind Speed: ${data.wind.speed} m/s</p>
   `;
